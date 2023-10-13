@@ -4,7 +4,7 @@ app = Dash(__name__)
 server = app.server
 app.layout = html.Div([
     html.Iframe(
-        src='https://www.google.com')
+        src='https://www.google.com/search?igu=1 i')
 ])
 
 if __name__ == '__main__':
