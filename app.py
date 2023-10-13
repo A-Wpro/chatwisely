@@ -1,11 +1,11 @@
-from dash import Dash, dcc, html
+from dash import Dash, dcc, html,Output,Input
 from selenium import webdriver
 
 app = Dash(__name__)
 server = app.server
 @app.callback(
-    dash.dependencies.Output("website-content", "children"),
-    dash.dependencies.Input("fetch-button", "n_clicks")
+    Output("website-content", "children"),
+    Input("fetch-button", "n_clicks")
 )
 def fetch_website(n_clicks):
     if n_clicks:
