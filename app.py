@@ -1,5 +1,4 @@
-import dash
-from dash import html
+from dash import Dash, dcc, html
 from selenium import webdriver
 
 app = Dash(__name__)
