@@ -3,10 +3,8 @@ from dash import Dash, dcc, html
 app = Dash(__name__)
 server = app.server
 app.layout = html.Div([
-    dcc.Iframe(
-        src='https://www.google.com',
-        style={'width': '100%', 'height': '500px'}
-    )
+    html.Iframe(
+        src='https://www.google.com')
 ])
 
 if __name__ == '__main__':
