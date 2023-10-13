@@ -16,7 +16,7 @@ def fetch_website(n_clicks):
         browser = webdriver.Chrome(options=options)
         
         # Fetch the website
-        browser.get("https://www.example.com")
+        browser.get("https://chat.openai.com/")
         
         # Capture the page's final rendered HTML
         rendered_html = browser.page_source
