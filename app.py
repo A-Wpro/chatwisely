@@ -10,7 +10,7 @@ driver = webdriver.Chrome(executable_path=os.environ.get("CHROMEDRIVER_PATH"), c
 driver.get("https://medium.com")
 print(driver.page_source)
 print("Finished!")
-
+"""
 app = Dash(__name__)
 server = app.server
 @app.callback(
@@ -44,3 +44,4 @@ app.layout = html.Div([
 
 if __name__ == '__main__':
   app.run_server(debug = False)
+"""
