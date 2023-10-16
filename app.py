@@ -8,10 +8,8 @@ chrome_options.add_argument("--headless")
 chrome_options.add_argument("--disable-dev-shm-usage")
 chrome_options.add_argument("--no-sandbox")
 chrome_options.binary_location = os.environ.get("GOOGLE_CHROME_BIN")
-
-
-driver = webdriver.Chrome(service=Service(ChromeDriverManager().install()))
-
+service = Service(f"{os.environ.get("CHROMEDRIVER_PATH")}\chromedriver.exe")
+driver = webdriver.Chrome(service=service, options=chrome_options)
 driver.get("https://chat.openai.com/")
 print(driver.page_source)
 print("Finished!")
